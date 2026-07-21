@@ -1,0 +1,254 @@
+/* ===================================================================
+   Global stylesheet of the JavaFX client (standard JavaFX CSS).
+   It is attached to every Scene in MainApplication.switchTo().
+   =================================================================== */
+
+.root {
+    -fx-font-family: "Segoe UI", "Tahoma", "Arial", sans-serif;
+    -fx-font-size: 13px;
+    -fx-background-color: #f2f4f7;
+
+    /* color palette (looked-up colors used below) */
+    -color-primary: #2f6fed;
+    -color-primary-dark: #1e5bd7;
+    -color-danger: #d64545;
+    -color-text: #26303b;
+    -color-muted: #7a8494;
+    -color-border: #d8dee6;
+}
+
+.label {
+    -fx-text-fill: -color-text;
+}
+
+/* big page titles */
+.page-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+/* small gray helper texts */
+.muted {
+    -fx-text-fill: -color-muted;
+    -fx-font-size: 12px;
+}
+
+/* highlighted price text */
+.price-label {
+    -fx-text-fill: -color-primary;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* application name in the top bar */
+.app-name {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-primary;
+}
+
+/* ---------- buttons ---------- */
+.button {
+    -fx-background-color: white;
+    -fx-text-fill: -color-text;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: -color-border;
+    -fx-padding: 7 16 7 16;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #eef1f5;
+}
+
+.button-primary {
+    -fx-background-color: -color-primary;
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+    -fx-font-weight: bold;
+}
+
+.button-primary:hover {
+    -fx-background-color: -color-primary-dark;
+}
+
+.button-danger {
+    -fx-text-fill: -color-danger;
+    -fx-border-color: #f0c4c4;
+}
+
+.button-danger:hover {
+    -fx-background-color: #fdf0f0;
+}
+
+.hyperlink {
+    -fx-text-fill: -color-primary;
+    -fx-border-color: transparent;
+}
+
+/* ---------- text inputs ---------- */
+.text-field, .password-field, .text-area, .combo-box {
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: -color-border;
+}
+
+.text-field, .password-field {
+    -fx-padding: 7 10 7 10;
+}
+
+.text-field:focused, .password-field:focused, .text-area:focused, .combo-box:focused {
+    -fx-border-color: -color-primary;
+}
+
+.text-area .content {
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+}
+
+/* ---------- lists ---------- */
+.list-view {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: -color-border;
+    -fx-padding: 4;
+}
+
+.list-cell {
+    -fx-background-color: white;
+    -fx-padding: 10 14 10 14;
+    -fx-border-color: transparent transparent #f0f2f5 transparent;
+}
+
+.list-cell:empty {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #f3f7ff;
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: #e2ecff;
+    -fx-text-fill: -color-text;
+}
+
+/* two-line list items */
+.item-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.item-sub {
+    -fx-text-fill: -color-muted;
+    -fx-font-size: 12px;
+}
+
+/* red circle with the number of unread messages */
+.unread-badge {
+    -fx-background-color: -color-danger;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+    -fx-padding: 2 8 2 8;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+/* ---------- cards and bars ---------- */
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 14;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.10), 16, 0, 0, 3);
+}
+
+.top-bar {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.06), 8, 0, 0, 1);
+}
+
+/* ---------- tabs (admin panel) ---------- */
+.tab-pane .tab-header-background {
+    -fx-background-color: transparent;
+}
+
+.tab {
+    -fx-background-color: #e7ebf0;
+    -fx-background-radius: 8 8 0 0;
+    -fx-padding: 6 14 6 14;
+}
+
+.tab:selected {
+    -fx-background-color: white;
+}
+
+.tab .tab-label {
+    -fx-text-fill: -color-muted;
+}
+
+.tab:selected .tab-label {
+    -fx-text-fill: -color-primary;
+    -fx-font-weight: bold;
+}
+
+/* ---------- chat bubbles ---------- */
+.bubble {
+    -fx-padding: 8 12 8 12;
+    -fx-background-radius: 12;
+}
+
+.bubble-mine {
+    -fx-background-color: #dceafe;
+}
+
+.bubble-theirs {
+    -fx-background-color: #eef1f5;
+}
+
+/* the chat list should not look like a normal selectable list */
+.chat-list .list-cell {
+    -fx-border-color: transparent;
+    -fx-padding: 4 8 4 8;
+}
+
+.chat-list .list-cell:filled:hover,
+.chat-list .list-cell:filled:selected {
+    -fx-background-color: white;
+}
+
+/* ---------- scroll bars ---------- */
+.scroll-bar .thumb {
+    -fx-background-color: #c3ccd6;
+    -fx-background-radius: 6;
+}
+
+/* پس‌زمینه صفحه اصلی */
+.main-root {
+    -fx-background-image: url("/images/main-bg.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+/* نوار فیلترها روی عکس پس‌زمینه */
+.filter-bar {
+    -fx-background-color: rgba(255, 255, 255, 0.88);
+    -fx-background-radius: 10;
+    -fx-padding: 8 12 8 12;
+}
+
+/* متن کم‌رنگ روی عکس تیره */
+.on-image {
+    -fx-text-fill: #f3ead9;
+    -fx-font-size: 12px;
+}
+
+/* پس‌زمینه صفحه ورود */
+.login-root {
+    -fx-background-image: url("/images/login-bg.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
